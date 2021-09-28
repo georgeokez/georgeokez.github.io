@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+}
+
+body {
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+.container{
+    display: flex;
+    flex-basis: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-image: url('./images/pattern-background-desktop.svg');
+    background-repeat: no-repeat;
+    background-color: hsl(225, 100%, 94%);
+    background-size: contain;  
+}
+
+.order-component{
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    align-items: center;
+    gap:20px;
+    /* width: auto; */
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(199, 209, 248, 1), 0 6px 20px 0 rgba(199, 209, 248, 1);
+}
+
+.order-component > h1 {
+    color: #1e2f51;
+    font-weight: 800;
+    margin-top: 20px;
+}
+
+.order-component> img{
+    border-radius: 20px 20px 0 0;
+    width: 100%;
+    height: auto;
+}
+
+.order-summary{
+    width: 300px;
+    text-align: center;
+    color: #999fab;
+    /* border: 1px solid red; */
+    font-size: 16px;
+}
+
+.order-content{
+    display: flex;
+    background-color: #f8f9fe;
+    width: 300px;
+    padding: 25px;
+    gap: 15px;
+    align-items: center;
+    border-radius: 10px;
+    color: #1e2f51;
+}
+
+.order-content > a{
+    font-size: 14px;
+    font-weight: 700;
+    color:#382ae1
+}
+
+.order-content > a:hover{
+    color: #766cf1;
+    text-decoration: none;
+}
+
+.plan-label{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap:5px;
+}
+
+.plan-label > p{
+    color: #999fab;
+    font-size: 16px;
+}
+
+.plan-label>h5{
+    flex-grow: 1;
+}
+
+.order-btn{
+    display: flex;
+    width:350px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    background-color: #382ae1;
+    border-radius:10px;
+    color:#fff;
+    margin-bottom: 10px;
+    box-shadow: 0 6px 20px 0 rgba(197, 190, 255, 1), 0 6px 20px 0 rgba(197, 190, 255, 1);
+}
+
+.order-btn:hover{
+    cursor: pointer;
+    background-color: #766cf1;
+}
+
+.cancel-label{
+    font-weight: 800;
+    color: #999fab;
+    font-size: 14px;
+    margin-bottom: 50px;
+}
+
+.cancel-label:hover{
+    cursor: pointer;
+    color: #3a415a
+}
+
+
+@media only screen and (max-device-width: 450px) {   
+
+    .container{
+        background-image: url('./images/pattern-background-mobile.svg');
+        height:100vh;
+        width: auto;
+    }
+
+    .order-component> img{
+        border-radius: 20px 20px 0 0;
+        width: 320px;
+        height: auto;
+    }
+
+    .order-summary{
+        font-size: 15px;
+    }
+
+    .order-content{
+        width: 230px;
+        padding: 15px;
+    }
+
+    .plan-label > p{
+        font-size: 14px;
+    }
+
+    .order-btn{
+        width: 250px;
+        height: 50px;
+    }
+    
+}
